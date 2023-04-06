@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var site = prompt("네이버, 다음, 네이트, 구글 중\
+        즐겨 사용하는 포럼 검색 사이트는?");
+        var url;
+
+        switch(site){
+            // 입력 받은 사이트가 구글이면
+            case "구글":
+                url = "www.google.com";
+                break;
+            case "다음":
+                url = "www.daum.net";
+                break;
+            //없거나 구글. 다음이 아닌 경우
+            default:
+                alert("보기 중에 없는 사이트입니다.");
+        }
+        //중괄호 생략
+        if(url)
+            // href 속성으로 사이트 이동 
+            location.href = "http://"+url;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
