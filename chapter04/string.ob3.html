@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var userEmail = prompt("당신의 이메일 주소는?");
+        var arrUrl = [".co.kr",".com",".net",".or.kr",".go.kr"];
+        var check1 = false;
+        var check2 = false;
+
+        // 1부터~ ex> a@a.com (o) -> 골뱅이 앞에 문자가 오는지
+        if(userEmail.indexOf("@") > 0){
+            check1 = true;
+        }
+        // a@a.com
+        for(var i=0; i<arrUrl.length; i++){
+            // ".co.kr",".com",".net",".or.kr",".go.kr" 를 체크
+            if(userEmail.indexOf(arrUrl[i]) > 2){
+                check2 = true;
+            }
+        }
+        //두개 다 참이어야지 입력받은 이메일 출력
+        if (check1 && check2) {
+            document.write(userEmail);
+        } else {
+            alert("이메일 형식이 잘못되었습니다.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
